@@ -50,4 +50,11 @@ public class SampleControllerTest {
         Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
         Assertions.assertEquals("OK", response.getBody());
     }
+
+    @Test
+    public void testHello() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/hello", String.class);
+        Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
+        Assertions.assertEquals("Hello World!", response.getBody());
+    }    
 }
