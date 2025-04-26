@@ -31,4 +31,9 @@ public class SampleController {
     public String pingPath4() {
         return new String("OK");
     }
+    
+    @RequestMapping(value="/hello", method=RequestMethod.GET)
+    public String hello() {
+        return "Hello World!";
+    }
 }
